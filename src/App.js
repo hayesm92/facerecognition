@@ -153,7 +153,7 @@ loadUser = (data) =>{
           {route === 'home' ? 
             <div> 
               <Logo />
-              <Rank name = {this.state.user.name} entries = {this.state.user.entries}/>
+              <Rank name = {this.state.data.name} entries = {this.state.data.entries}/>
               <ImageLinkForm onInputChange = {this.onInputChange} onButtonSubmit = {this.onButtonSubmit} />
               <FaceRecognition box = {box} imageUrl ={imageUrl}/>
             </div> : (
