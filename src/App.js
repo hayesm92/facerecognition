@@ -113,7 +113,7 @@ loadUser = (data) =>{
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
-            id: this.state.user.id
+            id: this.state.data.id
           })
 
 
