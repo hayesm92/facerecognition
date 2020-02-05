@@ -115,12 +115,10 @@ loadUser = (data) =>{
           body: JSON.stringify({
             id: this.state.user.id
           })
-
-
         })
         .then(response => response.json())
         .then(count => {
-          this.setState(Object.assign(this.state.user, {entries: count}))
+          this.setState(Object.assign(this.state.user.id, {entries: count}))
         })
         .catch(err => console.log(err))
         }
