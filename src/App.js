@@ -118,11 +118,12 @@ loadUser = (data) =>{
         })
         .then(response => response.json())
         .then(count => {
-          this.setState(Object.assign(this.state.user.id, {entries: count}))
+          this.setState(Object.assign(this.state.user, {entries: count}))
         })
         .catch(err => console.log(err))
-        }
+        
       this.displayFaceBox(this.calculateFaceLocation(response))
+      }
       })
     .catch(err => console.log(err));
     
