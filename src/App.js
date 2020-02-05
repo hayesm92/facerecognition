@@ -113,7 +113,7 @@ loadUser = (data) =>{
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
-            id: this.state.data.id
+            id: this.state.user.id
           })
 
 
@@ -121,7 +121,8 @@ loadUser = (data) =>{
         .then(response => response.json())
         .then(count => {
           this.setState(
-            {user: Object.assign(this.state.user, {entries: count})}
+            {user: Object.assign(this.state.user)}, 
+            {entries: count}
         )})
         .catch(err => console.log(err))
         }
