@@ -43,25 +43,11 @@ const initialState = {
 class App extends Component {
   constructor(){
     super();
-    this.state = {
-      input: '',
-      imageUrl: '',
-      box: {},
-      route: '',
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        email: '',
-        entries: 0,
-        joined: ''
-      }
-    }
+    this.state = initialState;
   }
 
 loadUser = (data) =>{
-  this.setState({
-    data: {
+  this.setState({user:{
       id: data.id,
       name: data.name,
       email: data.email,
